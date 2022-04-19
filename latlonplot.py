@@ -103,4 +103,13 @@ fig.coast(
 fig.colorbar(
     frame='+l"Ray coverage"'
     )
-fig.show() 
+
+# save figure
+save_fig = 1
+if not save_fig:
+    fig.show() 
+    #fig.show(method='external') #open with the default pdf reader
+else:
+#    fig.savefig("0S018_raydensity.png", crop=True, dpi=300, transparent=True)
+    fig.savefig("0S018_raydensity.pdf", crop=True, dpi=720)
+    print('Figure saved!')
